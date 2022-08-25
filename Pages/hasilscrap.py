@@ -1,5 +1,5 @@
-# import sys 
-# sys.path.append ("..")
+import sys 
+sys.path.append ("..")
 import streamlit as st
 from scrapper.scrapprofile import get_profile
 from search import username

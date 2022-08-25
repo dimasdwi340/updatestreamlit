@@ -177,4 +177,4 @@ def get_profile(username):
 #     else:
 #         return None
 
-# get_profile('anyageraldine')
+print (get_profile('anyageraldine'))

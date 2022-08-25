@@ -7,7 +7,7 @@ def get_related(username):
     return data
 
 def get_data_profile(username):
-    cookiejar = browser_cookie3.opera(domain_name='instagram.com')
+    cookiejar = browser_cookie3.firefox(domain_name='instagram.com')
     data = requests.get(f'https://www.instagram.com/{username}/?__a=1&__d=dis', cookies = cookiejar).json()
     return data
 

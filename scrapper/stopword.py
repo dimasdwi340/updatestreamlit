@@ -45,7 +45,7 @@ def stopword(caption):
     caption = stemmer.stem(caption)
     caption_tokenized = word_tokenize(caption)
     caption_stopword = [word for word in caption_tokenized if not word in stopword_list]
-    caption_stopword = stopwords(caption_stopword)
+    # caption_stopword = stopwords(caption_stopword)
     captionfiltered_english = [word for word in caption_stopword if not word in stopword_listenglish]
 
     #caption = lemma.lemmatize(caption)
