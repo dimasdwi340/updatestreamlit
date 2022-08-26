@@ -1,8 +1,5 @@
 import streamlit as st
-from scrapper.scrapprofile import get_data_profile
-from search import username
-import streamlit as st
-from scrapper.scrapprofile import get_profile
+from scrapprofile import get_profile
 with st.container():
     username = st.text_input("")
     scrap = st.button("cari")
@@ -38,5 +35,4 @@ if scrap or username:
                 """)
     else:
         st.write("Mohon maaf, pengguna tidak dapat ditemukan")
-
 

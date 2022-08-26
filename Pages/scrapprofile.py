@@ -17,23 +17,6 @@ data_bio = []
 # datacaption = []
 # list_caption = []
 
-f = open("tala-stopwords-indonesia.txt", "r")
-stopword_list = []
-for line in f:
-    stripped_line = line.strip()
-    line_list = stripped_line.split()
-    stopword_list.append(line_list[0])
-f.close()
-
-e = open("stopword-english.txt", "r")
-stopword_listenglish = []
-for line in e:
-    stripped_line = line.strip()
-    line_list = stripped_line.split()
-    stopword_listenglish.append(line_list[0])
-e.close()
-
-
 def word_count(str):
     counts = dict()
     words = str.split()
@@ -51,6 +34,7 @@ def get_profile(username):
     # data_profile = data_profile['graphql']['show_view_shop']
     data_profile = data_profile['graphql']['user']
     username = data_profile['username']
+    profile_pic = data_profile['profile_pic_url_hd']
     # username = stopword(username)
     full_name = data_profile['full_name']
     full_name = stopword(full_name)
@@ -134,6 +118,7 @@ def get_profile(username):
         # like = datalike,
         # comment = datacomment,
         username = username,
+        profile = profile_pic,
         fullname = full_name,
         count_follower = follower,
         post_count = post_count,
@@ -177,4 +162,4 @@ def get_profile(username):
 #     else:
 #         return None
 
-print (get_profile('anyageraldine'))
+# print (get_profile('anyageraldine'))

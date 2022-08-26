@@ -2,8 +2,7 @@
 from nltk.tokenize import word_tokenize
 from nltk.tokenize.treebank import TreebankWordDetokenizer
 from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
-from stopword_indo import stopwordindo
-from stopwordenglish import stopwordenglish
+from list_stopword import stopwordindo, stopwordenglish
 import re
 
 factory = StemmerFactory()

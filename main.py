@@ -4,7 +4,7 @@ import streamlit as st
 from Pages.landing import *
 from Pages.search import *
 from Pages.result import *
-from Pages.hasilscrap import *
+# from Pages.hasilscrap import *
 
 
 st.session_state.update(st.session_state)
@@ -20,8 +20,8 @@ def CB_Search():
     st.session_state.active_page = 'Search'
 def CB_Result():
     st.session_state.active_page = 'Result'
-def CB_Result():
-    st.session_state.active_page = 'Hasilscrap'
+# def CB_Result():
+#     st.session_state.active_page = 'Hasilscrap'
 
 st.set_page_config(page_title="InSona - Temukan Influencermu!", page_icon="🏠", layout="wide")
 with st.container():
@@ -35,7 +35,7 @@ elif st.session_state.active_page == 'Search':
     search()
 elif st.session_state.active_page == 'Result':
     result()
-elif st.session_state.active_page == 'Hasilscrap':
-    result()
+# elif st.session_state.active_page == 'Hasilscrap':
+#     result()
 
 
