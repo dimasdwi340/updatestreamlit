@@ -131,7 +131,12 @@ def get_profile(username):
         )
     data_info.append(doc)
     # bigdata_caption.append(datacaption)
-    return doc
+    failed = dict (pesan = 'Pengguna tidak dapat ditemukan')
+    if data_profile:
+        return doc
+    else :
+        return failed
+
 
     #print (word_count (datacaption))
 
