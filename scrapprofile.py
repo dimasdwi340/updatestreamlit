@@ -1,9 +1,10 @@
 from scraper import get_data_profile
-
+import urllib
 def get_profile(username):
     data_profile = get_data_profile(username)
     data_profile = data_profile['graphql']['user']
     profile_pic = data_profile['profile_pic_url_hd']
+    urllib.request.urlretrieve(f"{profile_pic}" , f"img/{username}.jpg")
     full_name = data_profile['full_name']
     follower = data_profile['edge_followed_by']['count']
     post_count = data_profile['edge_owner_to_timeline_media']['count']
